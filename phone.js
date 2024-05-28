@@ -24,7 +24,7 @@ class Phone{
     }
     
     set name(inputName) {
-        this._name = inputName;
+        this.name = inputName;
     }
     
     get manufacturer() {
@@ -43,6 +43,6 @@ class Phone{
         this.price = inputPrice;
     }
     toString(){
-        return `Id: ${this.id} - Name: ${this.name} - Manufacturer: ${this.manufacturer} - Price: ${this.price}`;
+        return `Id: ${ this.id } - Name: ${this.name} - Manufacturer: ${this.manufacturer} - Price: ${this.price}`
     }
 }

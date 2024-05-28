@@ -64,10 +64,10 @@ document.getElementById('disCau3').innerHTML = "Kết Quả: "+findSnt(mang)
 
 document.getElementById("cau4").innerHTML = '<h3>Câu 4. </h3>' +
     '<button onclick="formAdd()">Thêm điện thoại</button>'
-function show(){
+let list = new DsPhone()
+let arrPhone = list.listPhone
 
-    
-}
+
 function formAdd() {
     document.getElementById('disCau4').innerHTML = `
     <input type="text" placeholder="Nhập Mã Điện Thoại" id="inputId">
@@ -77,15 +77,13 @@ function formAdd() {
     <button onclick="add()">Thêm</button>
     `
 }
-let ArrayPhone = []
 function add(){
     let id = document.getElementById('inputId').value
     let name = document.getElementById('inputName').value
     let manufacturer = document.getElementById('inputManufacturer').value
     let price = document.getElementById('inputPrice').value
     let newArrayPhone = new Phone(id, name, manufacturer, price)
-    ArrayPhone.push(newArrayPhone)
+    list.addPhone(newArrayPhone)
     console.log(newArrayPhone)
-    show()
     
 }
